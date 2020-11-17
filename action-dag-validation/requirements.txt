@@ -1,3 +1,4 @@
 pathlib
 pytest
 apache-airflow
+tqdm

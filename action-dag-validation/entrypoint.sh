@@ -1,15 +1,16 @@
 #!/bin/sh
 
-sh -c "cd .."
+cd ..
 
-sh -c "echo current dir $PWD"
+echo current dir $PWD
 
-sh -c "ls"
+pwd
 
-sh -c "ls dags"
+ls
 
-#pytest ./test/dag_validation_test.py
-sh -c "python action-dag-validation/dag_validation_test.py"
+ls dags
+
+python action-dag-validation/dag_validation_test.py
 
 
-sh -c "echo Hello world my name is $INPUT_MY_NAME"
+echo Hello world my name is $INPUT_MY_NAME

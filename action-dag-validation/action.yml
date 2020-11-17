@@ -1,12 +1,7 @@
-name: "Hello Actions"
-description: "Greet someone"
-author: "octocat@github.com"
+name: "Dag Validation Action"
+description: "Validate every DAGs"
+author: "jaya.haryono@kitabisa.com"
 
-inputs:
-  MY_NAME:
-    description: "Who to greet"
-    required: true
-    default: "World"
 
 runs:
   using: "docker"

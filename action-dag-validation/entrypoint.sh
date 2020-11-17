@@ -1,12 +1,8 @@
 #!/bin/sh
-echo current dir $PWD
-
-pwd
-
-ls
+echo "Start Testing"
 
 cd dags
 
-python ../action-dag-validation/dag_validation_test.py
+pytest ../action-dag-validation/dag_validation_test.py
 
-echo Hello world my name is $INPUT_MY_NAME
+echo "Testing Done"

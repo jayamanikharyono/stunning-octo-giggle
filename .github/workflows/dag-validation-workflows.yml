@@ -1,11 +1,9 @@
 name: DAG Validation Workflow
 on: push
 jobs:
-  use-your-own-action:
-    name: Say Hi using your own action
+  validation-action:
+    name: Check DAGs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ./action-dag-validation
-        with:
-          MY_NAME: "Mona"

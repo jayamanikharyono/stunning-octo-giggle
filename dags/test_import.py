@@ -13,6 +13,8 @@ from pathlib import Path
 from tabulate import tabulate
 from sqlalchemy import create_engine
 
+from tqdm import tqdm
+
 DAG_ID = util.get_dag_id(__file__)
 
 default_args = {

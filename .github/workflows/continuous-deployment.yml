@@ -1,0 +1,9 @@
+name: Continuous Deployment
+on: push
+jobs:
+  first-job:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: echo Hello There!

@@ -3,6 +3,8 @@ sh -c "echo current dir $PWD"
 
 sh -c "ls"
 
+sh -c "ls dags"
+
 #pytest ./test/dag_validation_test.py
 python ./action-dag-validation/dag_validation_test.py
 

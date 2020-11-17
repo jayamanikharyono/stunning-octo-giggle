@@ -1,0 +1,39 @@
+name: Main Workflows
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  first-job:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: echo Hello There!
+      - name: show ASCII greeting
+        uses: mscoutermarsh/ascii-art-action@master
+        with:
+          text: 'HELLO!'
+  get-posts-job:
+    name: Get TDS posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo under $GITHUB_WORKSPACE
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install Scrapy
+        run: pip install scrapy
+
+      - name: get TDS posts about github actions
+        run: scrapy runspider posts_spider.py -o posts.json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: posts
+          path: posts.json

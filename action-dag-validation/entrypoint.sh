@@ -1,4 +1,7 @@
 #!/bin/sh
+
+sh -c "cd .."
+
 sh -c "echo current dir $PWD"
 
 sh -c "ls"

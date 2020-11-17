@@ -1,4 +1,4 @@
-name: Action from the same repo
+name: DAG Validation Workflow
 on: push
 jobs:
   use-your-own-action:

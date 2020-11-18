@@ -5,7 +5,6 @@ ADD entrypoint.sh /entrypoint.sh
 ADD requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-
 ENV AIRFLOW_HOME=/github/workspace
 ENV PYTHONPATH "${PYTHONPATH}:${AIRFLOW_HOME}"
 

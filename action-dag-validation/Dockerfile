@@ -7,4 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN chmod +x /entrypoint.sh
 
-CMD [ "pytest", "/action-dag-validation/dag_validation_test.py" ]
+CMD ["ls"]
+#CMD [ "pytest", "/action-dag-validation/dag_validation_test.py" ]
